@@ -91,17 +91,17 @@
 ### 1.5.1. 布局的过程
 1. parent渲染对象决定它的宽度
 2. parent渲染对象读取chilidren，并：
-   1. a. 放置child渲染对象（设置它的x和y）
-   2. b. 在需要时（它们当前为dirty或是处于全局layout或者其他原因）调⽤child渲染对象的layout，这将计算child的⾼度
+   1. a. 放置child渲染对象(设置它的x和y)
+   2. b. 在需要时(它们当前为dirty或是处于全局layout或者其他原因)调⽤child渲染对象的layout，这将计算child的⾼度
 3. parent渲染对象使⽤child渲染对象的累积⾼度，以及margin和padding的⾼度来设置⾃⼰的高度
 －这将被parent渲染对象的parent使⽤
 4. 将dirty标识设置为false
 
 ![](img/web/8.png)
 
-1. The output of the layout process is a "box model," which precisely captures the exact position and size of each element within the viewport: all of the relative measurements are converted to absolute pixels on the screen. 布局过程的输出是一个“盒子模型”，它精确地捕获了视口中每个元素的确切位置和大小：所有相对测量值都转换为屏幕上的绝对像素。
-    1. The "Layout" event captures the render tree construction, position, and size calculation in the Timeline. “布局”事件捕获时间轴中的渲染树构造，位置和大小计算。
-    2. When layout is complete, the browser issues "Paint Setup" and "Paint" events, which convert the render tree to pixels on the screen. 布局完成后，浏览器将发出“ Paint Setup”和“ Paint”事件，这些事件会将渲染树转换为屏幕上的像素。
+1. The output of the layout process is a "box model," which precisely captures the exact position and size of each element within the viewport: all of the relative measurements are converted to absolute pixels on the screen. 布局过程的输出是一个"盒子模型"，它精确地捕获了视口中每个元素的确切位置和大小：所有相对测量值都转换为屏幕上的绝对像素。
+    1. The "Layout" event captures the render tree construction, position, and size calculation in the Timeline. "布局"事件捕获时间轴中的渲染树构造，位置和大小计算。
+    2. When layout is complete, the browser issues "Paint Setup" and "Paint" events, which convert the render tree to pixels on the screen. 布局完成后，浏览器将发出" Paint Setup"和" Paint"事件，这些事件会将渲染树转换为屏幕上的像素。
 
 ![](img/web/9.png)
 
@@ -112,7 +112,7 @@ dirty，children are dirty说明即使这个渲染对象可能没问题，但它
 
 ## 1.6. Repaint 和 Reflow
 1. Repaint——屏幕的⼀部分要重画，⽐如某个CSS的背景⾊变了。但是元素的**几何尺⼨没有变**。
-2. Reflow——意味着元件的**几何尺⼨变了**，我们需要重新验证并计算Render Tree。是Render Tree 的⼀部分或全部发⽣了变化。这就是Reflow，或是Layout。（**HTML使⽤的是flow based layout，也就是流式布局，所以，如果某元件的⼏何尺⼨发⽣了变化，需要重新布局，也就叫 reflow**）reflow 会从这个root frame开始递归往下，依次计算所有的结点⼏何尺⼨和位置，在reflow过程中，可能会增加⼀些frame，⽐如⼀个⽂本字符串必需被包装起来。
+2. Reflow——意味着元件的**几何尺⼨变了**，我们需要重新验证并计算Render Tree。是Render Tree 的⼀部分或全部发⽣了变化。这就是Reflow，或是Layout。(**HTML使⽤的是flow based layout，也就是流式布局，所以，如果某元件的⼏何尺⼨发⽣了变化，需要重新布局，也就叫 reflow**)reflow 会从这个root frame开始递归往下，依次计算所有的结点⼏何尺⼨和位置，在reflow过程中，可能会增加⼀些frame，⽐如⼀个⽂本字符串必需被包装起来。
 
 ## 1.7. ⽤JS完成交互
 

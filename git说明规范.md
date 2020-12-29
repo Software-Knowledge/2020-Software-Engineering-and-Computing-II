@@ -10,7 +10,7 @@
 
 ## Git规范
 
-分支的命名限定在以下范围（master | dev | develop | release | feature/xxx | hotfix/xxx | fix/xxx ） xxx为任意内容
+分支的命名限定在以下范围(master | dev | develop | release | feature/xxx | hotfix/xxx | fix/xxx ) xxx为任意内容
 
 Eg. 1.feature/酒店信息管理    2.hotfix/订单流程更改 
 

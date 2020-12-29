@@ -28,7 +28,7 @@
 # 1. GUI入门
 
 ## 1.1. GUI Key elements
-1. 任何GUI（Graphical User Interface）都有三个关键元素：组件、布局和事件。
+1. 任何GUI(Graphical User Interface)都有三个关键元素：组件、布局和事件。
 
 ### 1.1.1. Component
 1. 组件是整个GUI的基础。常⻅组件有Label、TextField、Button等。
@@ -80,7 +80,7 @@ Table or list selection changes |ListSelectionListener
 ### 2.1.2. View
 1. JButton
    + 继承JComponent
-   + 包含DefaultButtonModel、⼀些视图数据（标签和图标）、⼀个负责按钮视图的BasicButtonUI对象
+   + 包含DefaultButtonModel、⼀些视图数据(标签和图标)、⼀个负责按钮视图的BasicButtonUI对象
 
 ### 2.1.3. Controller
 ```java
@@ -231,7 +231,7 @@ MVC vs MVP vs MVVM
 
 ## 3.2. 为什么要虚拟Dom？
 1. 虚拟DOM的最终**目的**是将虚拟节点渲染到视图上。但是如果直接使⽤虚拟节点覆盖旧节点的话，会有很多不必要的DOM操作。例如，⼀个ul标签下很多个li标签，其中只有⼀个li有变化，这种情况下如果使⽤新的ul去替代旧的ul,因为这些不必要的DOM操作⽽造成了性能上的浪费。
-2. 为了避免不必要的DOM操作，虚拟DOM在虚拟节点映射到视图的过程中，将虚拟节点与上⼀次渲染视图所使⽤的旧虚拟节点（oldVnode）做**对⽐**，找出真正需要更新的节点来进⾏DOM操作，从⽽避免操作其他⽆需改动的DOM。
+2. 为了避免不必要的DOM操作，虚拟DOM在虚拟节点映射到视图的过程中，将虚拟节点与上⼀次渲染视图所使⽤的旧虚拟节点(oldVnode)做**对⽐**，找出真正需要更新的节点来进⾏DOM操作，从⽽避免操作其他⽆需改动的DOM。
 3. 其实虚拟DOM在Vue.js主要做了两件事：
    1. 提供与真实DOM节点所对应的虚拟节点vnode
    2. 将虚拟节点vnode和旧虚拟节点oldVnode进⾏对⽐，然后更新视图

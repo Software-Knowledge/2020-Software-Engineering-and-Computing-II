@@ -19,8 +19,8 @@ web- 03-REST和JSON
 ## 1.1. REST Style
 
 ### 1.1.1. 论⽂(推荐)
->“The modern Web is one instance of a REST-style architecture.”
-1. ⾃从Roy Fielding博⼠在2000年他的博⼠论⽂中提出REST（Representational State Transfer）⻛格的软件架构模式后，REST就基本上迅速取代了复杂⽽笨重的SOAP，成为Web API的标准了。
+>"The modern Web is one instance of a REST-style architecture."
+1. ⾃从Roy Fielding博⼠在2000年他的博⼠论⽂中提出REST(Representational State Transfer)⻛格的软件架构模式后，REST就基本上迅速取代了复杂⽽笨重的SOAP，成为Web API的标准了。
 2. REST是推导出来的，而不是突然想出来的
 
 ![](img/web/14.png)
@@ -75,7 +75,7 @@ GET /api/products/123/reviews?page=2&size=10&sort=time
 ```
 
 ## 1.3. JSON
-1. JSON（JavaScript Object Notation，JavaScript对象表示法，读作/ˈdʒeɪsən/）是⼀种由道格拉斯·克罗克福特构想和设计、轻量级的数据交换语⾔，该语⾔以易于让⼈阅读的⽂字为基础，⽤来传输由属性值或者序列性的值组成的数据对象。尽管JSON是JavaScript的⼀个⼦集，但JSON是独⽴于语⾔的⽂本格式，并且采⽤了类似于C语⾔家族的⼀些习惯。
+1. JSON(JavaScript Object Notation，JavaScript对象表示法，读作/ˈdʒeɪsən/)是⼀种由道格拉斯·克罗克福特构想和设计、轻量级的数据交换语⾔，该语⾔以易于让⼈阅读的⽂字为基础，⽤来传输由属性值或者序列性的值组成的数据对象。尽管JSON是JavaScript的⼀个⼦集，但JSON是独⽴于语⾔的⽂本格式，并且采⽤了类似于C语⾔家族的⼀些习惯。
 2. JSON 数据格式与语⾔⽆关。即便它源⾃JavaScript，但当前很多编程语⾔都⽀持 JSON 式数据的⽣成和解析。JSON 的官⽅ MIME 类型是 application/json ，⽂件扩展名是 .json 。
 
 ![](img/web/16.png)
@@ -85,6 +85,6 @@ GET /api/products/123/reviews?page=2&size=10&sort=time
 # 2. RESTful介绍
 
 ## 2.1. 什么是RESTFul
-1.  REST（RepresentationalState Transfer）是一种软件架构的设计风格（不是标准），通过 HTTP接口处理数据，主要用于客户端和服务器的数据交互。该风格的具体特点——在服务器端，应用程序对象、数据库记录、算法、文本、图片等都是一个实体资源，使用 URI标识，所有资源都共享统一的接口（标准的HTTP方法）比如 GET、PUT、POST 和 DELETE，在客户端和服务器之间传输数据。
+1.  REST(RepresentationalState Transfer)是一种软件架构的设计风格(不是标准)，通过 HTTP接口处理数据，主要用于客户端和服务器的数据交互。该风格的具体特点——在服务器端，应用程序对象、数据库记录、算法、文本、图片等都是一个实体资源，使用 URI标识，所有资源都共享统一的接口(标准的HTTP方法)比如 GET、PUT、POST 和 DELETE，在客户端和服务器之间传输数据。
 
 ![](img/web/30.png)
